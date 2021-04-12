@@ -1,0 +1,51 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+@font-face {
+    font-family: "arial";
+    font-style: normal;
+    font-weight: normal;
+    src: url('Fonts/arial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "peyda";
+    font-style: normal;
+    font-weight: normal;
+    src: url('Fonts/Peyda-Medium.ttf') format('truetype');
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: peyda,Arial !important;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+a:link {
+    text-decoration: none
+}
+.body-background-imag {
+    background-image: url(../Images/655045.jpg);
+    animation: animation 200s linear infinite;
+}
+@keyframes animation {
+    100% {
+        background-position: 0px -3000px;
+    }
+}
+button:focus, a:focus, input:focus{
+    outline:none!important;
+}
+.logo {
+    height: 60px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+@media(max-width:991px) {
+    .logo {
+        height: 40px;
+        width: 150px;
+    }
+}
+

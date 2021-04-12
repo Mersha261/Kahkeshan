@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>title</title>
+    <link href="Css/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="Css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+    <link href="aos-master/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="body-background-imag">
+    <style>
+        .nav-container {
+            background-color: rgb(255 255 255 / 0.7);
+            width: 100%;
+            height: 150px;
+            padding: 2%
+        }
+        .dir-ltr{
+            direction:ltr!important;
+        }
+        .font-38{
+            font-size:38px;
+        }
+        .text-theme-deep-purple{
+            color:#000096
+        }
+        .text-theme-purple {
+            color: #960096
+        }
+        .bg-theme-deep-purple{
+            background-color:#000096;
+        }
+        .bg-theme-purple {
+            background-color: #960096;
+        }
+        .nav-a{
+            display:block;
+            padding:5px 15px;
+            transition:ease-in-out .3s;
+            margin-left:25px !important;
+            padding-left:25px !important;
+            position:relative;
+        }
+            .nav-a:hover {
+                border-radius: 50px;
+                background-color: #000096;
+                color: #fff !important;
+            }
+        .fa-caret-down{
+            position:absolute;
+            bottom:9px;
+            left:0px;
+        }
+
+        .nav-drop-down-container {
+            background-color: #000096;
+            top: 52px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 8px 1px #000;
+            width: max-content;
+            display: block;
+            margin-left:25px;
+        }
+
+        .nav-drop-down-item {
+            font-size: 29px;
+            margin: 3px 25px;
+            transition: ease-in-out .2s
+        }
+
+            .nav-drop-down-item:hover {
+                background-color: #960096;
+                border-radius: 10px;
+                padding: 3px 25px;
+                margin: 0px;
+            }
+        .line {
+            border: 1px solid #fff;
+            margin: 4px 0px;
+        }
+      
+        #cat:hover + #item{
+            display:block!important
+        }
+        #item:hover {
+            display: block !important
+        }
+        @media(max-width:1680px)
+        {
+            .font-38{
+                font-size:27px;
+            }
+            .nav-container{
+                height:115px;
+            }
+            .nav-drop-down-item{
+                font-size:20px;
+            }
+        }
+        @media(max-width:1400px){
+            .font-38 {
+                font-size: 22px;
+            }
+
+            .nav-container {
+                height: 100px;
+            }
+
+            .nav-drop-down-item {
+                font-size: 16px;
+            }
+            .logo{
+                height:50px;
+            }
+        }
+        @media(max-width:1180px){
+            #item {
+                position: absolute;
+                top: 50px;
+                right: 352px;
+            }
+        }
+    </style>
+
+
+
+  <div class="nav-container">
+      <nav class="navbar navbar-expand-lg ">
+          <!-- Brand -->
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="fa fa-bars nav-icon"></span>
+          </button>
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link font-38 text-theme-deep-purple nav-a" href="#">
+                          شرکت در مسابقه
+                          <i class="fa fa-caret-down text-theme-purple"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link font-38 text-theme-deep-purple nav-a" href="#">
+                          کتابخانه
+                          <i class="fa fa-caret-down text-theme-purple"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item" id="cat">
+                      <a class="nav-link font-38 text-theme-deep-purple nav-a" href="#">
+                          رده بندی
+                          <i class="fa fa-caret-down text-theme-purple"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item" style="display:none" id="item" >
+                      <div class="bg-theme-deep-purple text-white nav-drop-down-container">
+                          <div class="text-center">
+                              <a href="#">
+                                  <div class="text-white nav-drop-down-item">گالری</div>
+                              </a>
+                              <div class="line"></div>
+                              <a href="#">
+                                  <div class="text-white nav-drop-down-item">آرشیو قسمت</div>
+                              </a>
+                              <div class="line"></div>
+                              <a href="#">
+                                  <div class="text-white nav-drop-down-item">
+                                      پشت صحنه
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link font-38 text-theme-deep-purple nav-a" href="#">
+                          آرشیو قسمت ها
+                          <i class="fa fa-caret-down text-theme-purple"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link font-38 text-theme-deep-purple nav-a" href="#">
+                          پشت صحنه
+                          <i class="fa fa-caret-down text-theme-purple"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div> 
+          <a class="navbar-brand" href="#"><img src="Images/logo.png" class="logo" /></a>
+      </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="sliderengine/amazingslider.js"></script>
+    <script src="sliderengine/initslider-1.js"></script>
+    <script src="aos-master/dist/aos.js"></script>
+
+    <script>
+        $(window).scroll(function () {
+            var sticky = $('#nav'),
+                scroll = $(window).scrollTop();
+            if (scroll >= 200) {
+                sticky.removeClass('navbar-expand-lg');
+                $('#nav-dropdown-container').addClass('nav-drop-down-container-expand');
+                $('#nav-dropdown-container').removeClass('nav-drop-down-container');
+            }
+            else {
+                sticky.addClass('navbar-expand-lg');
+                $('#nav-dropdown-container').addClass('nav-drop-down-container');
+                $('#nav-dropdown-container').removeClass('nav-drop-down-container-expand');
+            }
+        });
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+</html>
